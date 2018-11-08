@@ -101,6 +101,16 @@ userSchema.statics.processProfile = (profile) => {
           path: '/',
           exact: false,
           deny: false
+        }, {
+          role: 'write',
+          path: '/',
+          exact: false,
+          deny: false
+        }, {
+          role: 'write',
+          path: '/Home',
+          exact: true,
+          deny: true
         }]
       }
       return db.User.create(nUsr)
